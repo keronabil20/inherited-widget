@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 
 class Inherited_widget extends InheritedWidget {
   final int counter;
