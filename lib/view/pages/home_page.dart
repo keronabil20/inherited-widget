@@ -6,6 +6,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     // Access the Inherited_widget instance to retrieve the counter value
     final stateWidget =
         context.dependOnInheritedWidgetOfExactType<Inherited_widget>();
     return Scaffold(
@@ -14,6 +15,7 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              // Display counter value from Inherited_widget or default to '0'
               Text(
                 stateWidget?.counter.toString() ?? '0',
                 style: Theme.of(context).textTheme.headlineMedium,
