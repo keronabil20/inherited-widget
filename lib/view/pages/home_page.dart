@@ -9,27 +9,29 @@ class HomeScreen extends StatelessWidget {
     final stateWidget =
         context.dependOnInheritedWidgetOfExactType<Inherited_widget>();
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              stateWidget?.counter.toString() ?? '0',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            SizedBox(
-              height: 50,
-              width: double.infinity,
-              child: ElevatedButton.icon(
-                onPressed: () {},
-                label: const Text('this is buttom'),
-                icon: const Icon(Icons.color_lens),
+      body: Padding(padding: EdgeInsets.all(20),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                stateWidget?.counter.toString() ?? '0',
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
-            )
-          ],
+              const SizedBox(
+                height: 50,
+              ),
+              SizedBox(
+                height: 50,
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                  onPressed: () {},
+                  label: const Text('this is buttom'),
+                  icon: const Icon(Icons.color_lens),
+                ),
+              )
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
